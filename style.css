@@ -1,0 +1,216 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background: url('images/bg-desktop.png'), hsl(229, 57%, 11%);
+  background-position-y: 50vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: bottom;
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 65vw;
+  margin-top: -70px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.main-container>* {
+  background-color: hsl(228, 56%, 26%);
+  display: flex;
+  border-radius: 8px;
+  padding: 35px 35px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+p {
+  color: rgb(206, 206, 206);
+  font-size: .9em;
+}
+
+.left-container {
+  border-radius: 10px 60px 10px 10px;
+  background-color: hsl(228, 56%, 26%); //dark blue
+  padding: 20px;
+  width: 325px;
+  height: 200px;
+  flex-grow: 1;
+  row-gap: 30px;
+  border-top-right-radius: 70px;
+}
+
+.right-container {
+  border-radius: 10px 10px 10px 10px;
+  background-color: hsl(228, 56%, 26%); //dark blue
+  width: 900px;
+  height: 150px;
+  margin-left: 35px;
+  flex-grow: 3.5;
+  position: relative;
+}
+
+.icon-area {
+  display: flex;
+  padding-top: 30px;
+}
+
+.icons {
+  background-color: hsl(229, 57%, 11%);
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.icons:nth-of-type(1)>img {
+  height: 19px;
+}
+
+.icons:nth-of-type(2)>img {
+  height: 17px;
+}
+
+.icons:nth-of-type(3)>img {
+  height: 17px;
+}
+
+.bar {
+  border: 3px solid hsla(229, 57%, 11%, 0.021);
+  background-color: hsla(229, 57%, 11%, 0.507);
+  width: 100%;
+  height: 18px;
+  border-radius: 100px;
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.progress {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 100px;
+  width: 74%;
+  height: 100%;
+  background-color: indigo;
+  background: linear-gradient(90deg, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+}
+
+.gb-remain {
+  background-color: hsla(360, 100%, 100%, 1);
+  border-radius: 100px;
+  height: 10px;
+  width: 10px;
+  margin-right: 1px;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+}
+
+.indicator {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: hsla(360, 100%, 100%, 1);
+  font-weight: 400;
+  font-size: .8em;
+}
+
+.speech {
+  display: flex;
+  position: absolute;
+  right: 40px;
+  top: -30px;
+  border-radius: 8px;
+  background-color: hsla(360, 100%, 100%, 1);
+  padding: 8px;
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+.triangle {
+  border-top: 30px solid hsla(360, 100%, 100%, 1);
+  border-left: 30px solid transparent;
+  display: flex;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+}
+
+.small {
+  font-size: 0.8rem;
+  color: hsl(229, 7%, 55%);
+  padding: 10px;
+  font-weight: 700;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* mobile only-----------------------------------------*/
+/* for width 375px and smaller:*/
+@media only screen and (max-width: 1440px) {
+  body {
+    background: url('images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: bottom;
+  }
+
+  .right-container {
+    border-radius: 10px 10px 10px 10px;
+    background-color: hsl(228, 56%, 26%); //dark blue
+    height: 150px;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+
+  .speech {
+    display: flex;
+    position: absolute;
+    right: 90px;
+    top: 130px;
+    border-radius: 8px;
+    background-color: hsla(360, 100%, 100%, 1);
+    padding: 8px;
+    font-size: 1.7em;
+    font-weight: 700;
+  }
+
+  .triangle {
+    visibility: hidden;
+  }
+}
