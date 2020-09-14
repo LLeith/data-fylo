@@ -180,8 +180,7 @@ footer {
 }
 
 /* mobile only-----------------------------------------*/
-/* for width 375px and smaller:*/
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 400px) {
   body {
     background: url('images/bg-mobile.png');
     background-repeat: no-repeat;
